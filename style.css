@@ -1,0 +1,317 @@
+/* style.css */
+
+/* Reset & base */
+body, html {
+  margin: 0;
+  padding: 0.1px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* background-image: url(vivid-blurred-colorful-background.jpg); */
+  background-image: linear-gradient(to right, rgba(27, 38, 132, 0.847),rgba(154, 86, 190, 0.915),rgba(160, 95, 195, 0.915), rgba(27, 38, 132, 0.847));
+  background-size: cover;     /* Makes the image cover the entire container */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Centers the image */
+  min-height: 100vh;
+}
+@keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(0px) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+@keyframes fade-left {
+    0% {
+      opacity: 0;
+      transform: translateX(30px) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+@keyframes zoom-out {
+    0% {
+      opacity: 1;
+      transform: scale(2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+@font-face {
+  font-family: 'cubic';
+  src: url(cubic.ttf);
+}
+@font-face {
+  font-family: 'florish';
+  src: url(florishabold-drnv7.otf);
+}
+@font-face {
+  font-family: 'Mostly';
+  src: url(Mostly\ Bright\ Sans.otf);
+}
+@font-face {
+  font-family: 'Mercy';
+  src: url(Mercy\ Christole.ttf);
+}
+h1{
+ /* text-align: center; */
+ font-size: 30px;
+ text-transform: uppercase;
+ font-family: florish;
+ animation: fade-up 1s;
+}
+h2{
+ /* text-align: center; */
+ font-size: 30px;
+ text-transform: uppercase;
+ font-family: florish;
+ animation: fade-up 3s;
+}
+h3 {
+ /* text-align: center; */
+ font-size: 30px;
+ text-transform: uppercase;
+ animation: fade-up 1s;
+
+}
+h4{
+  animation: fade-up 1s;
+}
+p {
+  animation: fade-up 1s;
+}
+strong {
+  animation: fade-up 1s;
+}
+.logo{
+font-family: Mercy;
+padding-bottom: 2%;
+font-size: 30px;
+animation: fade-in 2s;
+}
+/* Button styles & animated hover */
+button,
+.button-custom {
+  border: none;
+  background: #390fa367;
+  backdrop-filter: blur(5px);
+  color: #fff;
+  font-size: 1.1em;
+  padding: 0.7em 2em;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(87, 185, 199, 0.12);
+  transition: background 0.2s, transform 0.18s cubic-bezier(0.4,1.4,0.4,1.2), box-shadow 0.2s;
+  outline: none;
+  display: inline-block;
+  animation: fade-left 1.5s;
+}
+button:hover,
+.button-custom:hover,
+button:focus,
+.button-custom:focus {
+  background: #330759;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 8px 24px rgba(87, 185, 199, 0.21);
+}
+.background-image {
+  background-image: url("happy-parents-laughing-together-with-daughter.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(0, 0, 0, 0.341), rgba(255, 255, 255, 0));
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  filter: brightness(0.7);
+}
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5vw;
+}
+.welcome-container {
+  text-align: left;
+  /* background: rgba(255, 255, 255, 0.63);
+  backdrop-filter: blur(10px);
+  border-radius: 32px; */
+  /* padding: 5em 2.5em;
+  max-width: 500px;
+  max-height: 600px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  display: flex;
+  flex-direction: column; */
+  gap: 0em;
+  align-items: left;
+  color: white;
+}
+
+.select-container {
+  background: rgba(6, 0, 0, 0.474);
+  backdrop-filter: blur(10px);
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 700px;
+  width: 1000px;
+  border-radius: 32px;
+  padding: 2em 1.5em;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: left;
+  color: white;
+  font-size: large;
+}
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin-bottom: 1em;
+}
+.radio-card {
+  background: #0f0252;
+  border-radius: 20px;
+  padding: 0.5em 1.3em;
+  box-shadow: 0 1px 6px rgba(87, 185, 199, 0.10);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  transition: border 0.15s;
+  animation: fade-in 3s;
+}
+.radio-card:hover {
+  border: 2px solid #57B9C7;
+}
+.radio-card input[type="radio"] { margin-right: 0.6em; }
+.select-container button[type="submit"] {
+  margin-top: 1em;
+}
+.info-container, .detail-container {
+  background: rgba(8, 5, 54, 0.699);
+  backdrop-filter: blur(50px);
+  margin: 4vh auto 3vh auto;
+  border-radius: 28px;
+  padding: 1em 15em;
+  padding-left: 3%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  color: white;
+}
+#nutrition.info-section{
+  background-image: url("adorable-young-girl-eating-cereals.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-blend-mode: multiply;
+  background-size: cover;     /* Makes the image cover the entire container */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Centers the image */
+  color: #f3fafc;
+}
+#todo.info-section{
+  background-image: url("mother-father-embracing-their-daughter.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-blend-mode: multiply;
+  background-size: cover;     /* Makes the image cover the entire container */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Centers the image */
+  color: #f3fafc;
+}
+#essentials.info-section{
+  background-image: url("essentials.png"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-blend-mode: multiply;
+  background-size: cover;     /* Makes the image cover the entire container */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Centers the image */
+  color: #f3fafc;
+}
+#toys.info-section{
+  background-image: url("Baby\ toys.jpg"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-blend-mode: multiply;
+  background-size: cover;     /* Makes the image cover the entire container */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Centers the image */
+  color: #f3fafc;
+}
+#clothes.info-section{
+  background-image: url("clothes.png"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-blend-mode: multiply;
+  background-size: cover;     /* Makes the image cover the entire container */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Centers the image */
+  color: #f3fafc;
+}
+
+#immunization.info-section{
+  background-image: url("immunization.png"), linear-gradient(to right, rgba(0, 0, 0, 0.847),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  background-blend-mode: multiply;
+  background-size: cover;     /* Makes the image cover the entire container */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-position: center;  /* Centers the image */
+  color: #f3fafc;
+}
+
+#SelectText.select-container{
+  font-size: 100px;
+}
+.info-section {
+  height: 400px;
+  width: 200px;
+  margin-bottom: 1.3em;
+  border-radius: 18px;
+  padding: 1em;
+  padding-left: 10%;
+  padding-right: 90%;
+  background: #f4f9fa;
+}
+@media (max-width: 700px) {
+  .overlay {
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 0;
+    padding-bottom: 8vh;
+  }
+  .welcome-container {
+    padding: 2em 1em;
+    max-width: 90vw;
+    border-radius: 20px;
+  }
+  h1 { font-size: 1.5em; }
+  .select-container {
+    margin: 7vh 2vw 0 2vw;
+    padding: 4em 2em;
+    max-width: 200vw;
+    border-radius: 18px;
+  }
+  .info-container, .detail-container {
+    padding: 6em 2em;
+    margin: 50vh 10vw;
+    max-width: 200vw;
+    border-radius: 20px;
+  }
+  .info-section { border-radius: 10px; }
+
+  
+}

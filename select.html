@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Child Info | Childcare Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="select-container">
+    <h1>Select your child's age group</h1>
+    <h4>By telling us your child’s age, you’ll receive:</h4>
+    <ul>
+      <p>Personalized tips for feeding, sleep, and care.</p>
+      <p>Guidance on the best products and toys for their current stage.</p>
+      <p>A check-list of what to expect and what to prepare for as your little one grows.</p>
+      <p>Activities specifically designed to boost their development right now.</p>
+      <h4></h4>
+    </ul>
+    <p>Every recommendation, from nutrition and safety to play and clothing, is tailored for your baby’s unique stage—so you can confidently support your child’s healthy start.</p>
+    <form id="selectionForm">
+      <label>Age Group</label>
+      <h1></h1>
+      <div class="radio-group">
+        <label class="radio-card"><input type="radio" name="age" value="0-6" required>0-6 months</label>
+        <label class="radio-card"><input type="radio" name="age" value="7-12">7-12 months</label>
+        <label class="radio-card"><input type="radio" name="age" value="13-18">13-18 months</label>
+        <label class="radio-card"><input type="radio" name="age" value="19-24">19-24 months</label>
+      </div>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+  <script src="select.js"></script>
+</body>
+</html>
